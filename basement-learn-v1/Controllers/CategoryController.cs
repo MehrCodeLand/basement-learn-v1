@@ -83,7 +83,7 @@ namespace basement_learn_v1.Controllers
         {
             _db.Categories.Remove(category);
             _db.SaveChanges();
-
+            TempData["success"] = "We Deleted that data!";
             return RedirectToAction("Index");
         }
     }
